@@ -6,7 +6,6 @@ client.on('ready', () => {
     console.log('I am ready!');
 });
 
-
 client.on('message', (message) => {
   console.log(message.channel.id);
   if(message.channel.id.indexOf('channel.isPrivate') == 1) {
@@ -23,3 +22,34 @@ client.on('message', (message) => {
     }
   }
 });
+
+function Check(message, ndoac) {
+  var msg = message.content;
+  var fields = msg.split(' ');
+  var cc = fields[1];
+  if(ndoac) {
+    var ccbase = cc[1];
+    CheckCC(cc, function(result) {
+       message.author.sendMessage((result));
+    });
+  } else {
+    var ccbase = cc[1];
+    CheckCC(cc, function(result) {
+       message.channel.sendMessage((result));
+    });
+  }
+}
+
+function CheckCC(cc, callback) {
+process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
+var request = require("request");
+request({
+  url: "https://127.0.0.1/Apis/Check.php?cc=" + cc
+}, function (error, response, body) {
+   if (!error && response.statusCode == 200) {
+      callback(body);
+   } else {
+      callback("```\r\n [ " + error + " ] ```");
+   }
+});
+}
