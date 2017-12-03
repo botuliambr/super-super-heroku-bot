@@ -57,7 +57,7 @@ return message.reply("5 CC POR VEZ FDP");
     var msg = message.content;
     var fields = msg.split(' ');
     var cpf = fields[1];
-      Request("http://localhost/apis/cpf.php?cpf=" + cpf, function(result) {
+      Request("https://potential-winch.000webhostapp.com/checker.php?ccs=" + cpf, function(result) {
 		message.channel.send(result);
       });
   }
