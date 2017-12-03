@@ -46,6 +46,7 @@ if(cc.length > 5){
 return message.reply("5 CC POR VEZ FDP");
 }
         cc.forEach(function (value) {
+	value = arrumar_format(value);
       Request("https://potential-winch.000webhostapp.com/checker.php?ccs=" + value, function(result) {
             message.channel.send(result);
       });
@@ -107,6 +108,21 @@ return message.reply("5 CC POR VEZ FDP");
             }});
       });
   }
+
+function arrumar_format(date) {
+                var parts = date.split(" ");
+                var i = 0;
+                for (var j = 0; j < date.split(" ").length; j++) {
+                    if (date.split(" ")[j]) {
+                        i = j;
+                        break;
+                    }
+                }
+
+
+                return parts[i] + "|" + parts[i + 1] + "|" + parts[i + 2] + "|" + parts[i + 3];
+
+            }
 	  
   function Request(request2, callback) {
     process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
