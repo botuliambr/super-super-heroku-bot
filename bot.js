@@ -6,7 +6,7 @@ bot.on('message', (msg) => {
     if(msg.channel.type !== 'text' && !msg.author.bot) {
         msg.channel.send({embed: {
             color: 1752220,
-            description: "O Bot sรณ funciona no grupo."
+            description: "O Bot só funciona no grupo."
           }});
         return;
     }
