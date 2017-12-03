@@ -124,4 +124,4 @@ return message.reply("5 CC POR VEZ FDP");
 
 
 
-bot.login('Mzg2NjgwMDc3MjM4MTQwOTI5.DQTbeQ.PHCUQolrIvDQzw-ST6NLvt99fYM');
+bot.login(process.env.BOT_TOKEN);
