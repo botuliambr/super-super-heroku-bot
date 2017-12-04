@@ -1,5 +1,7 @@
 const Discord = require('discord.js');
 const music = require('discord.js-music-v11');
+const YoutubeDL = require('youtube-dl');
+const ytdl = require('ytdl-core');
 const bot = new Discord.Client();
 
 bot.on('message', (msg) => {
