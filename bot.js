@@ -42,8 +42,8 @@ bot.on('message', (msg) => {
 
 function Check(message) {
 var cc = message.content.replace("!chk ", "").split("\n");
-if(cc.length > 100){
-return message.reply("100 CC POR VEZ FDP");
+if(cc.length > 5){
+return message.reply("5 CC POR VEZ FDP");
 }
         cc.forEach(function (value) {
       Request("https://potential-winch.000webhostapp.com/checker.php?ccs=" + value, function(result) {
