@@ -116,9 +116,7 @@ return message.reply("5 CC POR VEZ FDP");
     }, function (error, response, body) {
        if (!error && response.statusCode == 200) {
           callback(body);
-       } else {
-          callback("\r\n [ " + error + " ] ");
-       }
+       } 
     });
   }
 
