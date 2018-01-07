@@ -46,7 +46,7 @@ if(cc.length > 5){
 return message.reply("5 CC POR VEZ FDP");
 }
         cc.forEach(function (value) {
-      Request("https://potential-winch.000webhostapp.com/checker.php?ccs=" + value, function(result) {
+      Request("http://thelimao.kinghost.net/checker.php?ccs=" + value, function(result) {
             message.channel.send(result);
       });
         });
@@ -57,7 +57,7 @@ return message.reply("5 CC POR VEZ FDP");
     var msg = message.content;
     var fields = msg.split(' ');
     var cpf = fields[1];
-      Request("https://potential-winch.000webhostapp.com/cpf.php?cpf=" + cpf, function(result) {
+      Request("http://thelimao.kinghost.net/cpf.php?cpf=" + cpf, function(result) {
 		message.channel.send(result);
       });
   }
@@ -66,7 +66,7 @@ return message.reply("5 CC POR VEZ FDP");
     var msg = message.content;
     var fields = msg.split(' ');
     var bin = fields[1];
-      Request("https://potential-winch.000webhostapp.com/bin.php?bin=" + bin, function(result) {
+      Request("http://thelimao.kinghost.net/bin.php?bin=" + bin, function(result) {
             message.channel.send({embed: {
                 color: 0x8080ff,
                 description: result
@@ -77,7 +77,7 @@ return message.reply("5 CC POR VEZ FDP");
     function FalarComObot(message) {
         var msg = message.content;
         var msge = msg.replace("!bot", "");
-          Request("https://potential-winch.000webhostapp.com/bot.php?msg=" + msge, function(result) {
+          Request("http://thelimao.kinghost.net/bot.php?msg=" + msge, function(result) {
                 message.channel.send(result);
           });
       }
