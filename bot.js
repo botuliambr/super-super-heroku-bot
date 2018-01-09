@@ -39,7 +39,7 @@ bot.on('message', (msg) => {
     }
 	
     if(message.startsWith('!netshoes')) {
-        NetShoesChecker(msg);
+        NetshoesChecker(msg);
     }
 	
 });
@@ -78,7 +78,7 @@ return message.reply("5 CC POR VEZ FDP");
       });
   }
 
-function Check(message) {
+function NetshoesChecker(message) {
 var dados = message.content.replace("!netshoes ", "").split("\n");
 if(dados.length > 10){
 return message.reply("10 logins por vez.");
