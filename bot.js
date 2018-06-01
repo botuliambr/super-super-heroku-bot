@@ -54,6 +54,9 @@ return message.reply("** O LIMITE DE CARTÕES É __10__**");
 		message.channel.send(result);
       });
         });
+   .then(msg => {
+    msg.delete(5000)
+  });
 
   }
 
