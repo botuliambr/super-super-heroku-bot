@@ -22,7 +22,7 @@ bot.on('message', (msg) => {
         VerifyBin(msg);
     }
 	
-    if(message.startsWith('!bot')) {
+    if(message.startsWith('.')) {
         FalarComObot(msg);
     }
 	
@@ -93,7 +93,7 @@ return message.reply("10 logins por vez.");
   
     function FalarComObot(message) {
         var msg = message.content;
-        var msge = msg.replace("!bot", "");
+        var msge = msg.replace(".", "");
           Request("http://thelimaochecker.tk/painel/full/bot.php?msg=" + msge, function(result) {
                 message.channel.send(result);
           });
