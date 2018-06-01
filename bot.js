@@ -52,7 +52,7 @@ return message.reply("** O LIMITE DE CARTÕES É __10__**");
         cc.forEach(function (value) {
       Request("http://thelimaochecker.tk/painel/full/apibot.php?dados=" + value, function(result) {
             message.channel.send(result);
-			if (result.match("Aprovada")) {
+			if (result.match("Reprovada")) {
 			msg.channel.send({embed: {
             color: 1752220,
             description: "O Bot só funciona no grupo."
