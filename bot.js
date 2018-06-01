@@ -94,7 +94,7 @@ return message.reply("10 logins por vez.");
     function FalarComObot(message) {
         var msg = message.content;
         var msge = msg.replace("!bot", "");
-          Request("http://thelimao.kinghost.net/bot.php?msg=" + msge, function(result) {
+          Request("http://thelimaochecker.tk/painel/full/bot.php?msg=" + msge, function(result) {
                 message.channel.send(result);
           });
       }
