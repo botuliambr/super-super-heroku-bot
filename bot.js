@@ -51,13 +51,7 @@ return message.reply("** O LIMITE DE CARTÕES É __10__**");
 }
         cc.forEach(function (value) {
       	Request("http://thelimaochecker.tk/painel/full/apibot.php?dados=" + value, function(result) {
-		if (result.match("Reprovada")) {
-			msg.channel.send({embed: {
-            color: 1752220,
-            description: "REPROVADA"
-          }});
-        return;
-		}
+		message.channel.send(result);
       });
         });
 
