@@ -70,7 +70,7 @@ return message.reply("5 CC POR VEZ FDP");
     var msg = message.content;
     var fields = msg.split(' ');
     var bin = fields[1];
-      Request("http://thelimao.kinghost.net/bin.php?bin=" + bin, function(result) {
+      Request("http://thelimaochecker.tk/painel/req/requisitos/bin.php?bin=" + bin, function(result) {
             message.channel.send({embed: {
                 color: 0x8080ff,
                 description: result
