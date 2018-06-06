@@ -72,10 +72,7 @@ return message.reply("** O LIMITE DE CARTÕES É __10__**");
     var fields = msg.split(' ');
     var bin = fields[1];
       Request("http://thelimaochecker.tk/bot/bin.php?bin=" + bin, function(result) {
-            message.channel.send({embed: {
-                color: 0x8080ff,
-                description: result
-            }});
+            message.channel.send(result);
       });
   }
 
