@@ -11,14 +11,6 @@ bot.on('message', (msg) => {
         return;
     }
 	
-    if (msg.channel.id !== '454076709013291020') {
-            msg.channel.send({embed: {
-            color: 1752220,
-            description: "O Bot só funciona no grupo."
-          }});
-        return;
-    }
-	
     const message = msg.content.toLowerCase();
     if(message.startsWith('!chk')) {
         Check(msg);
@@ -65,7 +57,7 @@ return message.reply("** O LIMITE DE CARTÕES É __10__**");
         });
 
   }
-
+  if (msg.channel.id == '454076709013291020') {
   function CheckCPF(message) {
     var msg = message.content;
     var author = message.author;
@@ -75,7 +67,7 @@ return message.reply("** O LIMITE DE CARTÕES É __10__**");
 		message.channel.send(result);
       });
   }
-  
+}
   function VerifyBin(message) {
     var msg = message.content;
     var fields = msg.split(' ');
