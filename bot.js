@@ -1,6 +1,10 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
 
+client.on('guildMemberAdd', member => {
+    const channel = getDefaultChannel(member.guild);
+    member.addRole(member.guild.roles.find("name", "MEMBROS"));
+
 bot.on('message', (msg) => {
 	
     const message = msg.content.toLowerCase();
