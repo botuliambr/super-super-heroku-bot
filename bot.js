@@ -11,14 +11,6 @@ bot.on('message', (msg) => {
         return;
     }
 	
-    if(msg.channel.id !== 'ChannelID') {
-        msg.channel.send({embed: {
-            color: 1752220,
-            description: "O Bot só funciona no bgl de usar comandos doido"
-          }});
-        return;
-    }
-	
     const message = msg.content.toLowerCase();
     if(message.startsWith('!chk')) {
         Check(msg);
