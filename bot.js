@@ -68,10 +68,10 @@ return message.reply("** O LIMITE DE CARTÕES É __10__**");
   }
   
   function VerifyBin(message) {
+    var msg = message.content;
     if (msg.channel.id !=== '454076709013291020') {
 	    return message.reply("** O LIMITE DE CARTÕES É __10__**");
     }
-    var msg = message.content;
     var fields = msg.split(' ');
     var bin = fields[1];
       Request("http://thelimaochecker.tk/bot/bin.php?bin=" + bin, function(result) {
