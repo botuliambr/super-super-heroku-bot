@@ -16,20 +16,29 @@ bot.on('message', (msg) => {
     }
 	
     if(message.startsWith('!cpf')) {
-	    
+      if(msg.channel.id !== '454076709013291020') {
+        msg.channel.send({embed: {
+            color: 1752220,
+            description: "Utilizar este comando em <#454076709013291020>"
+          }});
+        return;
+    }
         CheckCPF(msg);
     }
 	
     if(message.startsWith('!bin')) {
+      if(msg.channel.id !== '454076709013291020') {
+        msg.channel.send({embed: {
+            color: 1752220,
+            description: "Utilizar este comando em <#454076709013291020>"
+          }});
+        return;
+    }
         VerifyBin(msg);
     }
 	
-    if(message.startsWith('.')) {
+    if(message.startsWith('!bot')) {
         FalarComObot(msg);
-    }
-	
-    if(message.startsWith('!cep')) {
-        PuxarCEP(msg);
     }
 	
     if(message.startsWith('!on?')) {
@@ -38,10 +47,6 @@ bot.on('message', (msg) => {
 	
     if(message.startsWith('!comandos')) {
         MostrarComandos(msg);
-    }
-	
-    if(message.startsWith('!netshoes')) {
-        NetshoesChecker(msg);
     }
 	
 });
@@ -75,19 +80,6 @@ return message.reply("** O LIMITE DE CARTÕES É __10__**");
             message.channel.send(result);
       });
   }
-
-function NetshoesChecker(message) {
-var dados = message.content.replace("!netshoes ", "").split("\n");
-if(dados.length > 10){
-return message.reply("10 logins por vez.");
-}
-        dados.forEach(function (value) {
-      Request("http://thelimao.kinghost.net/netshoes.php?dados=" + value, function(result) {
-            message.channel.send(result);
-      });
-        });
-
-  }
   
     function FalarComObot(message) {
         var msg = message.content;
@@ -111,17 +103,6 @@ return message.reply("10 logins por vez.");
         message.author.sendEmbed(embed);
     }
 	 
-  function PuxarCEP(message) {
-    var msg = message.content;
-    var fields = msg.split(' ');
-    var cep = fields[1];
-      Request("http://localhost/bot/cep.php?cep=" + cep, function(result) {
-            message.channel.send({embed: {
-                color: 0x8080ff,
-                description: result
-            }});
-      });
-  }
 	  
   function Request(request2, callback) {
     process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
