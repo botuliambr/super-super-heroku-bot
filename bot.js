@@ -1,11 +1,6 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
 
-bot.on('message', (message) => {
-  const guildMember = message.member;
-  guildMember.addRole('MEMBROS');
-});
-
 bot.on('message', (msg) => {
 	
     const message = msg.content.toLowerCase();
@@ -53,6 +48,13 @@ bot.on('message', (msg) => {
     if(message.startsWith('!comandos')) {
         MostrarComandos(msg);
     }
+	
+});
+
+bot.on('guildMemberAdd', member =>{
+	
+	var role = member.guild.roles.find('name', 'MEMBROS');
+	member.addRole(role)
 	
 });
 
