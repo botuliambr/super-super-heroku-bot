@@ -68,13 +68,18 @@ return message.reply("** O LIMITE DE CARTÕES É __10__**");
   }
   
   function VerifyBin(message) {
+  if (msg.channel.id === 'ChannelID') {
     var msg = message.content;
     var fields = msg.split(' ');
     var bin = fields[1];
       Request("http://thelimaochecker.tk/bot/bin.php?bin=" + bin, function(result) {
             message.channel.send(result);
+      }else{
+	  return message.reply("só no canal de usar os comando doido'-'");
+	}
       });
   }
+  
 
 function NetshoesChecker(message) {
 var dados = message.content.replace("!netshoes ", "").split("\n");
