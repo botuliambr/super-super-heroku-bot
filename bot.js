@@ -54,7 +54,7 @@ bot.on('message', (msg) => {
 bot.on('guildMemberAdd', member =>{
 	
 	var role = member.guild.roles.find('name', 'MEMBROS');
-	member.addRole(role)
+	member.addRole(role);
 	
 });
 
