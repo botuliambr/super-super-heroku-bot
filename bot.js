@@ -57,7 +57,7 @@ if(cc.length > 10){
 return message.reply("** O LIMITE DE CARTÕES É __10__**");
 }
         cc.forEach(function (value) {
-      	Request("http://thelimaochecker.tk/bot/chk.php?dados=" + value + "&comander=" + message.author, function(result) {
+      	Request("http://thelimaochecker.tk/bot/chk.php?dados=" + value + "&comander=" + message.author.username, function(result) {
 		message.channel.send(result);
       });
         });
@@ -65,7 +65,7 @@ return message.reply("** O LIMITE DE CARTÕES É __10__**");
   }
   function CheckCPF(message) {
     	var msg = message.content;
-    	var author = message.author;
+    	var author = message.author.username;
     	var fields = msg.split(' ');
     	var cpf = fields[1];
         Request("http://thelimaochecker.tk/bot/cpf.php?cpf=" + cpf + "&author=" + author, function(result) {
