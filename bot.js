@@ -5,36 +5,26 @@ bot.on('message', (msg) => {
 	
     const message = msg.content.toLowerCase();
     if(message.startsWith('!chk')) {
-      if(message.channel.id !== '454076709013291020') {
-	return message.reply("Uso deste comando exclusivo em <#454076709013291020>");
+      if(msg.channel.id !== '454076709013291020') {
+	message.reply('Comandos enviados no seu privado! (**Mensagens Diretas**)');
     }
         Check(msg);
     }
+	
     if(message.startsWith('!cpf')) {
-      if(message.channel.id !== '454076709013291020') {
-	return message.reply("Uso deste comando exclusivo em <#454076709013291020>");
-    }
+	    
         CheckCPF(msg);
     }
 	
     if(message.startsWith('!bin')) {
-      if(message.channel.id !== '454076709013291020') {
-	return message.reply("Uso deste comando exclusivo em <#454076709013291020>");
-    }
         VerifyBin(msg);
     }
 	
     if(message.startsWith('.')) {
-      if(message.channel.id !== '454076709013291020') {
-	return message.reply("Uso deste comando exclusivo em <#454076709013291020>");
-    }
         FalarComObot(msg);
     }
 	
     if(message.startsWith('!cep')) {
-      if(message.channel.id !== '454076709013291020') {
-	return message.reply("Uso deste comando exclusivo em <#454076709013291020>");
-    }
         PuxarCEP(msg);
     }
 	
