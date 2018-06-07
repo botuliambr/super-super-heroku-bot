@@ -57,16 +57,18 @@ return message.reply("** O LIMITE DE CARTÕES É __10__**");
         });
 
   }
-  if (msg.channel.id == '454076709013291020') {
   function CheckCPF(message) {
-    var msg = message.content;
-    var author = message.author;
-    var fields = msg.split(' ');
-    var cpf = fields[1];
-      Request("http://thelimaochecker.tk/bot/cpf.php?cpf=" + cpf + "&author=" + author, function(result) {
+    bot.on('message', (msg) => {
+    if (msg.channel.id == '454076709013291020') {
+    	var msg = message.content;
+    	var author = message.author;
+    	var fields = msg.split(' ');
+    	var cpf = fields[1];
+        Request("http://thelimaochecker.tk/bot/cpf.php?cpf=" + cpf + "&author=" + author, function(result) {
 		message.channel.send(result);
-      });
-  }
+     	 });
+      }
+    }
 }
   function VerifyBin(message) {
     var msg = message.content;
