@@ -44,13 +44,6 @@ bot.on('message', (msg) => {
 	
 });
 
-client.on('message', msg => {
-    if (msg.channel.id !== '454076709013291020') {
-        // Deal with command
-    }
-});
-
-
 function Check(message) {
 var cc = message.content.replace("!chk ", "").split("\n");
 if(cc.length > 10){
