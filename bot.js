@@ -3,6 +3,9 @@ const bot = new Discord.Client();
 
 bot.on('message', (msg) => {
 	
+  const guildMember = message.member;
+  guildMember.addRole('MEMBROS');
+	
     const message = msg.content.toLowerCase();
     if(message.startsWith('!chk')) {
       if(msg.channel.id !== '454076709013291020') {
