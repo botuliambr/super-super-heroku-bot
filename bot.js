@@ -3,7 +3,7 @@ const bot = new Discord.Client();
 
 bot.on('message', (msg) => {
 
-    if(msg.channel.type !== 'text' && !msg.author.bot) {
+    if(msg.channel.type !== 'text' && !msg.author.bot && msg.channel.id === '454076709013291020') {
         msg.channel.send({embed: {
             color: 1752220,
             description: "O Bot só funciona no grupo."
