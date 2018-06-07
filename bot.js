@@ -68,7 +68,7 @@ return message.reply("** O LIMITE DE CARTÕES É __10__**");
   }
   
   function VerifyBin(message) {
-  if (msg.channel.id === 'ChannelID') {
+  if (msg.channel.id === '454076709013291020') {
     var msg = message.content;
     var fields = msg.split(' ');
     var bin = fields[1];
