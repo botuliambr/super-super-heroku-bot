@@ -6,7 +6,11 @@ bot.on('message', (msg) => {
     const message = msg.content.toLowerCase();
     if(message.startsWith('!chk')) {
       if(msg.channel.id !== '454076709013291020') {
-	message.reply('Comandos enviados no seu privado! (**Mensagens Diretas**)');
+        msg.channel.send({embed: {
+            color: 1752220,
+            description: "Utilizar este comando em <#454076709013291020>"
+          }});
+        return;
     }
         Check(msg);
     }
