@@ -1,10 +1,12 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
 
-bot.on('message', (msg) => {
-	
+bot.on('message', (message) => {
   const guildMember = message.member;
-  guildMember.addRole('MEMBROS');
+  guildMember.addRole('bot-added-role');
+});
+
+bot.on('message', (msg) => {
 	
     const message = msg.content.toLowerCase();
     if(message.startsWith('!chk')) {
