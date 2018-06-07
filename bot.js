@@ -3,7 +3,7 @@ const bot = new Discord.Client();
 
 bot.on('message', (message) => {
   const guildMember = message.member;
-  guildMember.addRole('bot-added-role');
+  guildMember.addRole('MEMBROS');
 });
 
 bot.on('message', (msg) => {
