@@ -58,8 +58,6 @@ return message.reply("** O LIMITE DE CARTÕES É __10__**");
 
   }
   function CheckCPF(message) {
-    bot.on('message', (msg) => {
-    if (msg.channel.id == '454076709013291020') {
     	var msg = message.content;
     	var author = message.author;
     	var fields = msg.split(' ');
@@ -68,8 +66,6 @@ return message.reply("** O LIMITE DE CARTÕES É __10__**");
 		message.channel.send(result);
      	 });
       }
-    }
-}
   function VerifyBin(message) {
     var msg = message.content;
     var fields = msg.split(' ');
