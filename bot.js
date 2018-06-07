@@ -68,6 +68,9 @@ return message.reply("** O LIMITE DE CARTÕES É __10__**");
   }
   
   function VerifyBin(message) {
+    if (msg.channel.id !=== '454076709013291020') {
+	    return message.reply("** O LIMITE DE CARTÕES É __10__**");
+    } else {
     var msg = message.content;
     var fields = msg.split(' ');
     var bin = fields[1];
@@ -75,7 +78,7 @@ return message.reply("** O LIMITE DE CARTÕES É __10__**");
             message.channel.send(result);
       });
   }
-  
+  }
 
 function NetshoesChecker(message) {
 var dados = message.content.replace("!netshoes ", "").split("\n");
