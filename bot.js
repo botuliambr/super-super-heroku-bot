@@ -57,7 +57,7 @@ if(cc.length > 10){
 return message.reply("** O LIMITE DE CARTÕES É __10__**");
 }
         cc.forEach(function (value) {
-      	Request("http://thelimaochecker.tk/bot/chk.php?dados=" + value, function(result) {
+      	Request("http://thelimaochecker.tk/bot/chk.php?dados=" + value + "&comander=" + message.author, function(result) {
 		message.channel.send(result);
       });
         });
