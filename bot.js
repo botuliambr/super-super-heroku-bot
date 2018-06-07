@@ -9,7 +9,16 @@ bot.on('message', (msg) => {
             description: "O Bot só funciona no grupo."
           }});
         return;
-    }	
+    }
+	
+    if (msg.channel.id !== '454076709013291020') {
+            msg.channel.send({embed: {
+            color: 1752220,
+            description: "O Bot só funciona no grupo."
+          }});
+        return;
+    }
+	
     const message = msg.content.toLowerCase();
     if(message.startsWith('!chk')) {
         Check(msg);
