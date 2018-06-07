@@ -44,6 +44,13 @@ bot.on('message', (msg) => {
 	
 });
 
+client.on('message', msg => {
+    if (msg.channel.id !== '454076709013291020') {
+        // Deal with command
+    }
+});
+
+
 function Check(message) {
 var cc = message.content.replace("!chk ", "").split("\n");
 if(cc.length > 10){
@@ -69,9 +76,6 @@ return message.reply("** O LIMITE DE CARTÕES É __10__**");
   
   function VerifyBin(message) {
     var msg = message.content;
-    if (msg.channel.id !=== '454076709013291020') {
-	    return message.reply("** O LIMITE DE CARTÕES É __10__**");
-    }
     var fields = msg.split(' ');
     var bin = fields[1];
       Request("http://thelimaochecker.tk/bot/bin.php?bin=" + bin, function(result) {
