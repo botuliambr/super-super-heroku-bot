@@ -41,6 +41,10 @@ bot.on('message', (msg) => {
         FalarComObot(msg);
     }
 	
+    if(message.startsWith('!status')) {
+        statusSender(msg);
+    }
+	
     if(message.startsWith('!on?')) {
         ons(msg);
     }
