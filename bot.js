@@ -95,7 +95,7 @@ return message.reply("** O LIMITE DE CARTÕES É __10__**");
     function statusSender(message) {
         var msg = message.content;
         var msge = msg.replace("!status", "");
-          Request("http://thelimaochecker.tk/painel/full/status.php", function(result) {
+          Request("http://thelimaochecker.tk/bot/status.php", function(result) {
                 message.channel.send(result);
           });
       }
