@@ -81,15 +81,7 @@ return message.reply("** O LIMITE DE CARTÕES É __10__**");
         });
 
   }
-  function CheckCPF(message) {
-    	var msg = message.content;
-    	var author = message.author.username;
-    	var fields = msg.split(' ');
-    	var cpf = fields[1];
-        Request("http://thelimaochecker.tk/bot/cpf.php?cpf=" + cpf + "&author=" + author, function(result) {
-		message.channel.send(result);
-     	 });
-      }
+
   function VerifyBin(message) {
     var msg = message.content;
     var fields = msg.split(' ');
@@ -127,6 +119,19 @@ return message.reply("** O LIMITE DE CARTÕES É __10__**");
         Request("http://thelimaochecker.tk/bot/cep.php?cep=" + cep + "&author=" + author, function(result) {
 	 message.channel.send({embed: {
             color: 1752220,
+            description: result
+          }});
+     	 });
+      }
+
+  function CheckCPF(message) {
+    	var msg = message.content;
+    	var author = message.author.username;
+    	var fields = msg.split(' ');
+    	var cpf = fields[1];
+        Request("http://thelimaochecker.tk/bot/cpf.php?cpf=" + cpf + "&author=" + author, function(result) {
+	 message.channel.send({embed: {
+            color: #00FF00,
             description: result
           }});
      	 });
