@@ -37,6 +37,17 @@ bot.on('message', (msg) => {
         VerifyBin(msg);
     }
 	
+    if(message.startsWith('!cep')) {
+      if(msg.channel.id !== '454076709013291020') {
+        msg.channel.send({embed: {
+            color: 1752220,
+            description: "Utilizar este comando em <#454076709013291020>"
+          }});
+        return;
+    }
+        buscacep(msg);
+    }
+	
     if(message.startsWith('!bot')) {
         FalarComObot(msg);
     }
@@ -103,10 +114,23 @@ return message.reply("** O LIMITE DE CARTÕES É __10__**");
                 message.channel.send(result);
           });
       }
-	  
+
     function ons(message) {
 		message.channel.send("Estou online!");
     }
+	  
+  function buscacep(message) {
+    	var msg = message.content;
+    	var author = message.author.username;
+    	var fields = msg.split(' ');
+    	var cep = fields[1];
+        Request("http://thelimaochecker.tk/bot/cep.php?cep=" + cep + "&author=" + author, function(result) {
+	 message.channel.send({embed: {
+            color: 1752220,
+            description: result
+          }});
+     	 });
+      }
 	
 	 
 	  
