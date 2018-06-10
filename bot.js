@@ -131,7 +131,7 @@ return message.reply("** O LIMITE DE CARTÕES É __10__**");
     	var cpf = fields[1];
         Request("http://thelimaochecker.tk/bot/cpf.php?cpf=" + cpf + "&author=" + author, function(result) {
 	 message.channel.send({embed: {
-            color: #00FF00,
+            color: 1752220,
             description: result
           }});
      	 });
