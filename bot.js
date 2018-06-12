@@ -75,14 +75,18 @@ return message.reply("** O LIMITE DE CARTÕES É __10__**");
 
   }
 
-  function VerifyBin(message) {
-    var msg = message.content;
-    var fields = msg.split(' ');
-    var bin = fields[1];
-      Request("http://thelimaochecker.tk/bot/bin.php?bin=" + bin, function(result) {
-            message.channel.send(result);
-      });
-  }
+  function binchecker(message) {
+    	var msg = message.content;
+    	var author = message.author.username;
+    	var fields = msg.split(' ');
+    	var bin = fields[1];
+        Request("http://thelimaochecker.tk/bot/bin.php?bin=" + bin + "&author=" + author, function(result) {
+	 message.channel.send({embed: {
+            color: 1752220,
+            description: result
+          }});
+     	 });
+      }
   
     function FalarComObot(message) {
         var msg = message.content;
