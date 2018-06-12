@@ -8,7 +8,7 @@ bot.on('message', (msg) => {
       if(msg.channel.id !== '456173788518940682') {
         msg.channel.send({embed: {
             color: 1752220,
-            description: "Utilizar este comando em <#454076709013291020>"
+            description: "Utilizar este comando em <#456173788518940682>"
           }});
         return;
     }
@@ -19,7 +19,7 @@ bot.on('message', (msg) => {
       if(msg.channel.id !== '456173788518940682') {
         msg.channel.send({embed: {
             color: 1752220,
-            description: "Utilizar este comando em <#454076709013291020>"
+            description: "Utilizar este comando em <#456173788518940682>"
           }});
         return;
     }
@@ -30,7 +30,7 @@ bot.on('message', (msg) => {
       if(msg.channel.id !== '456173788518940682') {
         msg.channel.send({embed: {
             color: 1752220,
-            description: "Utilizar este comando em <#454076709013291020>"
+            description: "Utilizar este comando em <#456173788518940682>"
           }});
         return;
     }
@@ -41,7 +41,7 @@ bot.on('message', (msg) => {
       if(msg.channel.id !== '456173788518940682') {
         msg.channel.send({embed: {
             color: 1752220,
-            description: "Utilizar este comando em <#454076709013291020>"
+            description: "Utilizar este comando em <#456173788518940682>"
           }});
         return;
     }
@@ -52,7 +52,7 @@ bot.on('message', (msg) => {
       if(msg.channel.id !== '456173788518940682') {
         msg.channel.send({embed: {
             color: 1752220,
-            description: "Utilizar este comando em <#454076709013291020>"
+            description: "Utilizar este comando em <#456173788518940682>"
           }});
         return;
     }
