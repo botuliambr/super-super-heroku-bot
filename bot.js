@@ -68,7 +68,7 @@ function Check(message, value) {
     if (cc.length > 10) {
         return message.reply("** O LIMITE DE CARTÕES É __10__**");
     }
-    Request(`dados aqui do link ${value} "&comander=" ${message.author.username}`, function (result) {
+    Request(`http://thelimaochecker.tk/bot/cep.php?cep= ${value} "&comander=" ${message.author.username}`, function (result) {
         message.channel.send(result);
     });
 }
