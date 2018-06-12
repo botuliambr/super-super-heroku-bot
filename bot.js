@@ -27,7 +27,7 @@ bot.on('message', (msg) => {
     }
 	
     if(message.startsWith('!bin')) {
-        VerifyBin(msg);
+        binchecker(msg);
     }
 	
     if(message.startsWith('!cep')) {
