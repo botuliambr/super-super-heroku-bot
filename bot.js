@@ -62,18 +62,16 @@ bot.on('guildMemberAdd', member =>{
 	
 });
 
-function Check(message) {
-var cc = message.content.replace("!chk ", "").split("\n");
-if(cc.length > 10){
-return message.reply("** O LIMITE DE CARTÕES É __10__**");
+function Check(message, value) {
+    let args = message.content.slice().trim().split(/ +/g);
+    let cc = args.slice(2).join(' ');
+    if (cc.length > 10) {
+        return message.reply("** O LIMITE DE CARTÕES É __10__**");
+    }
+    Request(`dados aqui do link ${value} "&comander=" ${message.author.username}`, function (result) {
+        message.channel.send(result);
+    });
 }
-        cc.forEach(function (value) {
-      	Request("http://thelimaochecker.tk/bot/chk.php?dados=" + value + "&comander=" + message.author.username, function(result) {
-		message.channel.send(result);
-      });
-        });
-
-  }
 
   function binchecker(message) {
     	var msg = message.content;
