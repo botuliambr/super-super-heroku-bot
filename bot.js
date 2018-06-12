@@ -16,10 +16,10 @@ bot.on('message', (msg) => {
     }
 	
     if(message.startsWith('!cpf')) {
-      if(msg.channel.id !== '456173788518940682') {
+      if(msg.channel.id !== '456185580317835274') {
         msg.channel.send({embed: {
             color: 1752220,
-            description: "Utilizar este comando em <#456173788518940682>"
+            description: "Utilizar este comando em <#456185580317835274>"
           }});
         return;
     }
@@ -27,36 +27,18 @@ bot.on('message', (msg) => {
     }
 	
     if(message.startsWith('!bin')) {
-      if(msg.channel.id !== '456173788518940682') {
-        msg.channel.send({embed: {
-            color: 1752220,
-            description: "Utilizar este comando em <#456173788518940682>"
-          }});
-        return;
-    }
         VerifyBin(msg);
     }
 	
     if(message.startsWith('!cep')) {
-      if(msg.channel.id !== '456173788518940682') {
+      if(msg.channel.id !== '456185327158165506') {
         msg.channel.send({embed: {
             color: 1752220,
-            description: "Utilizar este comando em <#456173788518940682>"
+            description: "Utilizar este comando em <#456185327158165506>"
           }});
         return;
     }
         buscacep(msg);
-    }
-	
-    if(message.startsWith('!rastreio')) {
-      if(msg.channel.id !== '456173788518940682') {
-        msg.channel.send({embed: {
-            color: 1752220,
-            description: "Utilizar este comando em <#456173788518940682>"
-          }});
-        return;
-    }
-        buscarastreio(msg);
     }
 	
     if(message.startsWith('!bot')) {
@@ -141,19 +123,6 @@ return message.reply("** O LIMITE DE CARTÕES É __10__**");
     	var fields = msg.split(' ');
     	var cpf = fields[1];
         Request("http://thelimaochecker.tk/bot/cpf.php?cpf=" + cpf + "&author=" + author, function(result) {
-	 message.channel.send({embed: {
-            color: 1752220,
-            description: result
-          }});
-     	 });
-      }
-
-  function buscarastreio(message) {
-    	var msg = message.content;
-    	var author = message.author.username;
-    	var fields = msg.split(' ');
-    	var codigo = fields[1];
-        Request("http://thelimaochecker.tk/bot/rastreio.php?codigo=" + codigo + "&author=" + author, function(result) {
 	 message.channel.send({embed: {
             color: 1752220,
             description: result
