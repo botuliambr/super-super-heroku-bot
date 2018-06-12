@@ -5,7 +5,7 @@ bot.on('message', (msg) => {
 	
     const message = msg.content.toLowerCase();
     if(message.startsWith('!chk')) {
-      if(msg.channel.id !== '454076709013291020') {
+      if(msg.channel.id !== '456173788518940682') {
         msg.channel.send({embed: {
             color: 1752220,
             description: "Utilizar este comando em <#454076709013291020>"
@@ -16,7 +16,7 @@ bot.on('message', (msg) => {
     }
 	
     if(message.startsWith('!cpf')) {
-      if(msg.channel.id !== '454076709013291020') {
+      if(msg.channel.id !== '456173788518940682') {
         msg.channel.send({embed: {
             color: 1752220,
             description: "Utilizar este comando em <#454076709013291020>"
@@ -27,7 +27,7 @@ bot.on('message', (msg) => {
     }
 	
     if(message.startsWith('!bin')) {
-      if(msg.channel.id !== '454076709013291020') {
+      if(msg.channel.id !== '456173788518940682') {
         msg.channel.send({embed: {
             color: 1752220,
             description: "Utilizar este comando em <#454076709013291020>"
@@ -38,7 +38,7 @@ bot.on('message', (msg) => {
     }
 	
     if(message.startsWith('!cep')) {
-      if(msg.channel.id !== '454076709013291020') {
+      if(msg.channel.id !== '456173788518940682') {
         msg.channel.send({embed: {
             color: 1752220,
             description: "Utilizar este comando em <#454076709013291020>"
@@ -49,7 +49,7 @@ bot.on('message', (msg) => {
     }
 	
     if(message.startsWith('!rastreio')) {
-      if(msg.channel.id !== '454076709013291020') {
+      if(msg.channel.id !== '456173788518940682') {
         msg.channel.send({embed: {
             color: 1752220,
             description: "Utilizar este comando em <#454076709013291020>"
