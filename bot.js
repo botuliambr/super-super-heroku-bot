@@ -65,8 +65,7 @@ bot.on('guildMemberAdd', member =>{
   function Check(message) {
     	var msg = message.content;
     	var author = message.author.username;
-    	var fields = msg.split(' ');
-    	var cc = fields[1];
+	var cc = message.content.replace("!chk ", "").split("\n");
         Request("http://thelimaochecker.tk/bot/chk.php?dados=" + cc + "&comander=" + author, function(result) {
 	 message.channel.send({embed: {
             color: 1752220,
