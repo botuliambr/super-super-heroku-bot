@@ -16,10 +16,10 @@ bot.on('message', (msg) => {
     }
 	
     if(message.startsWith('!cpf')) {
-      if(msg.channel.id !== '456185580317835274') {
+      if(msg.channel.id !== '456212640117555211') {
         msg.channel.send({embed: {
             color: 1752220,
-            description: "Utilizar este comando em <#456185580317835274>"
+            description: "Utilizar este comando em <#456212640117555211>"
           }});
         return;
     }
@@ -31,10 +31,10 @@ bot.on('message', (msg) => {
     }
 	
     if(message.startsWith('!cep')) {
-      if(msg.channel.id !== '456185327158165506') {
+      if(msg.channel.id !== '456212658639732786') {
         msg.channel.send({embed: {
             color: 1752220,
-            description: "Utilizar este comando em <#456185327158165506>"
+            description: "Utilizar este comando em <#456212658639732786>"
           }});
         return;
     }
