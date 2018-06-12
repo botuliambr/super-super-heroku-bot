@@ -5,10 +5,10 @@ bot.on('message', (msg) => {
 	
     const message = msg.content.toLowerCase();
     if(message.startsWith('!chk')) {
-      if(msg.channel.id !== '456173788518940682') {
+      if(msg.channel.id !== '456212635768061952') {
         msg.channel.send({embed: {
             color: 1752220,
-            description: "Utilizar este comando em <#456173788518940682>"
+            description: "Utilizar este comando em <#456212635768061952>"
           }});
         return;
     }
